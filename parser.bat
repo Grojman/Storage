@@ -10,7 +10,7 @@ echo [> %JSON_FILE%
 :: Recorremos cada lenguaje en storage
 for /d %%L in (storage\*) do (
     set "LANG_NAME=%%~nxL"
-    set "LANG_ICON=/icons/%%~nxL.png"
+    set "LANG_ICON=icons/%%~nxL.png"
     echo     {>> %JSON_FILE%
     echo         "name": "!LANG_NAME!",>> %JSON_FILE%
     echo         "icon": "!LANG_ICON!",>> %JSON_FILE%
@@ -47,12 +47,12 @@ for /d %%L in (storage\*) do (
             )
 
             set "FILE_PATH=%%F"
-            set "FILE_PATH=!FILE_PATH:\=/!"
+            set "FILE_PATH=!FILE_PATH:\=/!" 
 
             :: Escribimos el archivo en JSON
             echo             {>> %JSON_FILE%
             echo                 "name": "%%~nF",>> %JSON_FILE%
-            echo                 "path": "/!FILE_PATH!",>> %JSON_FILE%
+            echo                 "path": "!FILE_PATH!",>> %JSON_FILE%
             echo                 "description": "!DESC_TEXT:~0,-1!" >> %JSON_FILE%
             echo             }>> %JSON_FILE%
         )

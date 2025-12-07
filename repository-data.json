@@ -1,61 +1,61 @@
 [
     {
         "name": "csharp",
-        "icon": "/icons/csharp.png",
+        "icon": "icons/csharp.png",
         "files": [
             {
                 "name": "AutoSaver",
-                "path": "/storage/csharp/AutoSaver.cs",
-                "description": "Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver.Static class that triggers a given function every X seconds. Can be used to make an autosaver." 
+                "path": "storage/csharp/AutoSaver.cs",
+                "description": "Static class that triggers a given function every X seconds. Can be used to make an autosaver." 
             }
 ,
             {
                 "name": "FileTracker",
-                "path": "/storage/csharp/FileTracker.cs",
+                "path": "storage/csharp/FileTracker.cs",
                 "description": "Class made for Windows OS to track an specific folder in search of new files, renames, deleted files, and any other type of change you may encounter inside the folder" 
             }
 ,
             {
                 "name": "GitHubSaver",
-                "path": "/storage/csharp/GitHubSaver.cs",
+                "path": "storage/csharp/GitHubSaver.cs",
                 "description": "Class using the GitHub library for C# that holds the connection and credentials. It is not tested enought Be carefull" 
             }
 ,
             {
                 "name": "GoogleDriveService",
-                "path": "/storage/csharp/GoogleDriveService.cs",
+                "path": "storage/csharp/GoogleDriveService.cs",
                 "description": "Use of Google's Standar library for C# to retrieve and upload files to a certain Google Drive account. IT HAS NOT BEEN TESTED" 
             }
 ,
             {
                 "name": "ImageManager",
-                "path": "/storage/csharp/ImageManager.cs",
+                "path": "storage/csharp/ImageManager.cs",
                 "description": "Exclusively made for WPF, a system that tries to load in cache any Image Source, so that having multiple instances of the same image doesn't eat as much memory as it could" 
             }
 ,
             {
                 "name": "LocalBackupHandler",
-                "path": "/storage/csharp/LocalBackupHandler.cs",
+                "path": "storage/csharp/LocalBackupHandler.cs",
                 "description": "An easy class for creating and retrieven backup files for any kind of proyect you may need" 
             }
 ,
             {
                 "name": "LocalDataManager",
-                "path": "/storage/csharp/LocalDataManager.cs",
+                "path": "storage/csharp/LocalDataManager.cs",
                 "description": "Static class with functions to convert to Json and retrieve the values given. Also, It includes a function for FlowDocuments in WPF" 
             }
 ,
             {
                 "name": "Logger",
-                "path": "/storage/csharp/Logger.cs",
+                "path": "storage/csharp/Logger.cs",
                 "description": "Standar implementation of a Logger class, that can retrieve and store exceptions that may ocurr on production place, so that you, the developer, can know what the heck just happened" 
             }
 ,
             {
                 "name": "NetworkUtils",
-                "path": "/storage/csharp/NetworkUtils.cs",
+                "path": "storage/csharp/NetworkUtils.cs",
                 "description": "A series of functions that may be usefull for creating apps that connect's to servers, for example: knowing if the machine has access to internet, or parsing ip values" 
             }
         ]
-    }
+    },
 ]
