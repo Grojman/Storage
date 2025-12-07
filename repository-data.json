@@ -57,5 +57,5 @@
                 "description": "A series of functions that may be usefull for creating apps that connect's to servers, for example: knowing if the machine has access to internet, or parsing ip values" 
             }
         ]
-    },
+    }
 ]
