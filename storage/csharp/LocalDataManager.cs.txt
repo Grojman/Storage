@@ -1,0 +1,1 @@
+Static class with functions to convert to Json and retrieve the values given. Also, It includes a function for FlowDocuments in WPF

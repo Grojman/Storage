@@ -1,0 +1,1 @@
+Class using the GitHub library for C# that holds the connection and credentials. It is not tested enought! Be carefull

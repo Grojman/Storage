@@ -1,0 +1,373 @@
+:root, *
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header,
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+body{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    &::-webkit-scrollbar { 
+        display: none;  /* Older Safari and Chromium */
+    }
+}
+
+
+.title{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+
+    background-clip: text;
+    background: linear-gradient(135deg, #2E3BFF 0%, #00C6FF 50%, #9D00FF 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.subtitle
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 50vw;
+    color: #00C6FF;
+    margin: 1rem;
+}
+
+.languages-container
+{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* card style  */
+
+/* From Uiverse.io by Pravins01 https://uiverse.io/Pravins01/odd-fly-66*/ 
+.card {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.card .language-image
+{
+    width: 8rem;
+    height: 8rem;
+}
+
+.card .language-name
+{
+    font-family: 'Manrope', sans-serif;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -2.5%;
+  margin: auto;
+  width: 105%;
+  height: 105%;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.10) scaleY(1.1);
+  /* transform: rotate(-90deg) scaleX(1.34) scaleY(0.77); */
+}
+
+
+
+
+/* FULLSCREEN EXPANSION */
+/* Base animation setup */
+.card {
+  transition: 
+    transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    width 0.6s ease,
+    height 0.6s ease,
+    border-radius 0.6s ease;
+}
+
+/* Animated fullscreen state */
+.card.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 999;
+  border-radius: 0;
+  justify-content: center;
+  animation: expandCard 0.6s ease forwards;
+  cursor: default;
+}
+
+/* Reverse when closing */
+.card:not(.expanded) {
+  animation: shrinkCard 0.6s ease forwards;
+}
+
+/* Keyframes for smooth expansion */
+@keyframes expandCard {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 20px;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 0;
+  }
+}
+
+@keyframes shrinkCard {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 0;
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+    border-radius: 20px;
+  }
+}
+
+/* Gradient animation */
+.card::before {
+  transition: 
+    transform 0.6s ease,
+    width 0.6s ease,
+    height 0.6s ease,
+    border-radius 0.6s ease;
+}
+
+.card.expanded::before {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 0;
+  transform: scale(1);
+}
+
+.card::after {
+  transition: 
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+.card.expanded::after {
+  transform: scale(1);
+  filter: blur(40px);
+}
+
+/* New section fade in/out */
+.language-section {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+    opacity 0.4s ease 0.2s,
+    visibility 0.4s ease;
+
+    display: flex;
+    gap: 10vw;
+}
+
+.files-list
+{
+  margin: 3rem 3rem 3rem 8rem;
+    background-color: #0d1117;
+    border-radius: 10px;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar { 
+        display: none;  /* Older Safari and Chromium */
+    }
+}
+
+.file
+{
+    font-family: 'Cascadia Code';
+    font-size: 1.5rem;
+    color: whitesmoke;
+
+    padding: 0.5rem 1rem;
+
+    text-overflow: ellipsis;
+
+    transition: background-color 0.1s ease-in-out;
+
+    &:hover
+    {
+        background-color: #202732;
+    }
+}
+.file-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: 
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
+
+  margin-top: 0;
+  font-size: 0.9rem;
+  color: bisque;
+}
+
+/* Estado expandido */
+.file.expanded .file-description {
+  max-height: 30vh;   /* suficiente para el texto */
+  opacity: 1;
+  margin-top: 8px;
+}
+.file-information
+{
+  max-height: 100vh;
+    flex-grow: 1;
+    border-radius: 10px 0 0 10px;
+    background-color: #0d1117;
+    width: 10px;
+    overflow: hidden;
+    
+}
+
+.file-header
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-name
+{
+    font-family: 'Cascadia Code';
+  color: whitesmoke;
+  margin-left: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 3px solid #9D00FF;
+  color: #9D00FF;
+
+  padding: 0.5rem;
+  border-radius: 6px;
+
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+}
+
+/* Hover effect */
+.copy-btn:hover {
+  background-color: #9D00FF;
+  color: #0d1117;
+}
+
+.file-content
+{
+  padding-bottom: 5rem;
+  font-size: large;
+  text-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 100vh;
+ &::-webkit-scrollbar { 
+        display: none;  /* Older Safari and Chromium */
+    }
+}
+
+.card.expanded .language-section {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Back button */
+.back-btn {
+    position: absolute;
+    left: 5vh;
+    top: 5vh;
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    & > img
+    {
+        width: 3rem;
+    }
+
+    transition: transform 0.25s ease-in-out;
+
+
+    &:hover
+    {
+
+        transform: translateX(-5px);
+    }
+}
+

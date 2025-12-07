@@ -1,0 +1,1 @@
+Exclusively made for WPF, a system that tries to load in cache any Image Source, so that having multiple instances of the same image doesn't eat as much memory as it could

@@ -1,0 +1,1 @@
+Standar implementation of a Logger class, that can retrieve and store exceptions that may ocurr on production place, so that you, the developer, can know what the heck just happened

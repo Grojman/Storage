@@ -1,0 +1,1 @@
+Class made for Windows OS to track an specific folder in search of new files, renames, deleted files, and any other type of change you may encounter inside the folder

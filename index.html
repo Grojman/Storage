@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+
+
+
+
+  <title>Storage</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Storage</h1>
+        <p class="subtitle">A sometimes-growing repository with different code examples to certain languages, to solve certain problems you may enconter. Feel free to use as many as you want!</p>
+    </header>
+
+    <main class="languages-container">
+
+    </main>
+
+    <!-- card by this guy https://uiverse.io/Pravins01/odd-fly-66 -->
+    <template id="language-template">
+        <div class="card">
+            <img class="language-image"/>
+            <p class="heading language-name"></p>
+
+            <!-- Hidden section (appears on expand) -->
+            <div class="language-section">
+                <button class="back-btn"><img src="/icons/left-arrow.svg"></button>
+                <div class="files-list"></div>
+                <div class="file-information">
+                    <div class="file-header">
+                        <p class="file-name"></p>
+                        <button class="copy-btn">Copy code</button>
+                    </div>
+                    <pre class="file-content"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

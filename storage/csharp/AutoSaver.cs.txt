@@ -1,0 +1,1 @@
+Static class that triggers a given function every X seconds. Can be used to make an autosaver.
