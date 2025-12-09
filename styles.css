@@ -371,3 +371,23 @@ body{
     }
 }
 
+@media (orientation: portrait)
+{
+  .language-section
+  {
+    flex-direction: column;
+    justify-content: space-between;  
+  }
+
+  .files-list
+  {
+    width: 60vw;
+    height: 30vh;
+  }
+
+  .file-information
+  {
+    width: 100vw;
+    max-height: 80vh;
+  }
+}
