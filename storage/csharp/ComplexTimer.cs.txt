@@ -1,0 +1,1 @@
+A generic and extensible timer that operates on any numeric-like type supporting arithmetic and comparison, allowing precise control over progression, lifecycle events, and looping behavior beyond simple time-based use cases.

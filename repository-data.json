@@ -10,6 +10,12 @@
             }
 ,
             {
+                "name": "ComplexTimer",
+                "path": "storage/csharp/ComplexTimer.cs",
+                "description": "A generic and extensible timer that operates on any numeric-like type supporting arithmetic and comparison, allowing precise control over progression, lifecycle events, and looping behavior beyond simple time-based use cases." 
+            }
+,
+            {
                 "name": "FileTracker",
                 "path": "storage/csharp/FileTracker.cs",
                 "description": "Class made for Windows OS to track an specific folder in search of new files, renames, deleted files, and any other type of change you may encounter inside the folder" 
@@ -55,6 +61,12 @@
                 "name": "NetworkUtils",
                 "path": "storage/csharp/NetworkUtils.cs",
                 "description": "A series of functions that may be usefull for creating apps that connect's to servers, for example: knowing if the machine has access to internet, or parsing ip values" 
+            }
+,
+            {
+                "name": "SimpleTimer",
+                "path": "storage/csharp/SimpleTimer.cs",
+                "description": "A lightweight frame-based timer that increments or decrements a float value using a fixed or dynamically retrieved step, optionally looping and invoking a callback when reaching a target value." 
             }
         ]
     }

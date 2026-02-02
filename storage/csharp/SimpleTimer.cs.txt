@@ -1,0 +1,1 @@
+A lightweight frame-based timer that increments or decrements a float value using a fixed or dynamically retrieved step, optionally looping and invoking a callback when reaching a target value.
