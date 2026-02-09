@@ -240,7 +240,7 @@ body{
     }
 }
 
-.file
+.file, .folder-header
 {
     font-family: 'Cascadia Code';
     font-size: 1.5rem;
@@ -297,6 +297,8 @@ body{
 
 .file-name
 {
+  overflow: hidden;
+  text-overflow: ellipsis;
     font-family: 'Cascadia Code';
   color: whitesmoke;
   margin-left: 0.5rem;
@@ -304,6 +306,7 @@ body{
 }
 
 .copy-btn {
+  min-width: 7em;
   background: transparent;
   border: 3px solid #9D00FF;
   color: #9D00FF;
@@ -390,4 +393,17 @@ body{
     width: 100vw;
     max-height: 80vh;
   }
+}
+
+.folder-header {
+    cursor: pointer;
+}
+
+.folder-children {
+    margin-left: 16px;
+    display: none;
+}
+
+.folder-children.open {
+    display: block;
 }

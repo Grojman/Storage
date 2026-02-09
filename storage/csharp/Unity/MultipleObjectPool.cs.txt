@@ -1,0 +1,1 @@
+Class made for proyects in Unity to handle multiple object pooling with infinite expanding of the pools depending of the object's demand
